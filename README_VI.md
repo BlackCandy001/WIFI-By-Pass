@@ -1,5 +1,7 @@
 # WIDT - WiFi Inspector & Dictionary Tester
 
+**Tác giả: Black Candy 🍫**
+
 **WIDT** (WiFi Inspector & Dictionary Tester) là ứng dụng Android cho mục đích học tập, giúp người dùng phân tích mạng WiFi và kiểm tra độ an toàn của mật khẩu WiFi của chính mình.
 
 > ⚠️ **TUYÊN BỐ MIỄN TRỪ TRÁCH NHIỆM**: Ứng dụng này chỉ dùng cho **MỤC ĐÍCH HỌC TẬP**. Chỉ sử dụng để kiểm tra mạng WiFi CỦA BẠN. Không sử dụng để tấn công mạng của người khác. Tác giả không chịu trách nhiệm cho bất kỳ hành vi lạm dụng nào.
@@ -219,7 +221,7 @@ Không có giấy phép rõ ràng - liên hệ tác giả để được cấp p
 ## 📞 Liên Hệ
 
 Để được hỗ trợ:
-- GitHub Issues: [Tạo issue](https://github.com/yourusername/WIDT/issues)
+- GitHub Issues: [Tạo issue](https://github.com/BlackCandy001/WIFI-By-Pass/issues)
 - Email: (sắp có)
 
 ---
