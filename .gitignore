@@ -1,0 +1,23 @@
+*.iml
+.gradle
+/local.properties
+.idea/
+.idea
+/.idea/
+/.idea/workspace.xml
+/.idea/navitor.xml
+/.idea/assetWizardSettings.xml
+build/
+app/build/
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+logcat.txt
+logcat_utf8.txt
+
+# Exclude DOC folder as requested
+/DOC/
+/DOC
+DOC/
+DOC

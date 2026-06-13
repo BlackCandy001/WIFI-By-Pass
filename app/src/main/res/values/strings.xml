@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">WIDT</string>
+    <string name="analyzer_title">WiFi Analyzer</string>
+    <string name="tester_title">Dictionary Tester</string>
+    <string name="offline_title">Offline Cracker</string>
+    <string name="settings_title">Settings</string>
+    
+    <!-- Analyzer -->
+    <string name="scan_wifi">Scan WiFi</string>
+    <string name="scanning">Scanning...</string>
+    <string name="no_wifi_found">No WiFi networks found</string>
+    <string name="signal_strength">Signal Strength</string>
+    <string name="channel">Channel</string>
+    <string name="frequency">Frequency</string>
+    <string name="encryption">Encryption</string>
+    <string name="vendor">Vendor</string>
+    <string name="bssid">BSSID</string>
+    
+    <!-- Tester -->
+    <string name="select_network">Select Network</string>
+    <string name="start_test">Start Test</string>
+    <string name="stop_test">Stop Test</string>
+    <string name="progress">Progress</string>
+    <string name="passwords_tried">Passwords Tried</string>
+    <string name="estimated_time">Estimated Time</string>
+    <string name="password_found">Password Found!</string>
+    <string name="password_not_found">Password not found in dictionary</string>
+    <string name="testing_in_progress">Testing in progress…</string>
+    <string name="ready">Ready</string>
+    <string name="testing_label">Testing:</string>
+    
+    <!-- Offline -->
+    <string name="capture_handshake">Capture Handshake</string>
+    <string name="import_pcap">Import PCAP</string>
+    <string name="start_cracking">Start Cracking</string>
+    
+    <!-- Settings -->
+    <string name="shizuku_status">Shizuku Status</string>
+    <string name="shizuku_not_running">Shizuku not running</string>
+    <string name="shizuku_running">Shizuku is running</string>
+    <string name="setup_shizuku">Setup Shizuku</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="dictionary_path">Dictionary Path</string>
+    <string name="language_title">Language</string>
+    <string name="language_vietnamese">Tiếng Việt</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_select_hint">Select display language</string>
+    
+    <!-- Common -->
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="warning">Warning</string>
+    <string name="disclaimer">⚠️ DISCLAIMER ⚠️\n\nThis app is for EDUCATIONAL PURPOSES only.\nOnly use it to test YOUR OWN WiFi networks.\nDo NOT use to attack networks you don\'t own.\n\nBy using this app, you agree to these terms.</string>
+</resources>

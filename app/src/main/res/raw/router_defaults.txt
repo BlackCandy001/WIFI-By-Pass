@@ -1,0 +1,41 @@
+# TP-LINK
+adminadmin
+tplink123
+tplink
+admin
+
+# Tenda
+tendawifi
+tenda123
+
+# TOTOLINK
+totolink123
+totolink
+
+# Huawei
+huawei123
+huawei
+
+# ZTE
+zte12345
+zte
+
+# Linksys
+linksys
+admin
+
+# Netgear
+netgear
+password
+
+# ASUS
+asus
+admin
+
+# D-Link
+dlink
+admin
+
+# Xiaomi
+xiaomi
+admin

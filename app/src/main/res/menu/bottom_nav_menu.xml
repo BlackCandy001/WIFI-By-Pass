@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_analyzer"
+        android:icon="@android:drawable/ic_menu_manage"
+        android:title="@string/analyzer_title" />
+    <item
+        android:id="@+id/navigation_tester"
+        android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/tester_title" />
+    <item
+        android:id="@+id/navigation_offline"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@string/offline_title" />
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@android:drawable/ic_menu_preferences"
+        android:title="@string/settings_title" />
+</menu>

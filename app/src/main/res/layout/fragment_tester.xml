@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- HEADER: Selected Network + Engine   -->
+        <!-- ═══════════════════════════════════ -->
+
+        <TextView
+            android:id="@+id/tv_selected_network"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="No network selected"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- ENGINE CARD                         -->
+        <!-- ═══════════════════════════════════ -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_engine"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_selected_network">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- Title row -->
+                <TextView
+                    android:id="@+id/tv_engine_card_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Connection Engine"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_engine_status"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_engine_status"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="Details"
+                    android:textSize="11sp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Engine name + speed badge -->
+                <LinearLayout
+                    android:id="@+id/ll_engine_status_row"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_engine_card_title">
+
+                    <TextView
+                        android:id="@+id/tv_engine_status"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Engine: ..."
+                        android:textSize="12sp" />
+
+                    <!-- Speed badge -->
+                    <TextView
+                        android:id="@+id/tv_engine_badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="2dp"
+                        android:paddingBottom="2dp"
+                        android:textSize="10sp"
+                        android:textColor="@color/white"
+                        android:background="@drawable/shape_badge"
+                        android:text="●  Slow"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+
+                <!-- Hint text -->
+                <TextView
+                    android:id="@+id/tv_engine_hint"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Engine được chọn tự động dựa trên quyền khả dụng"
+                    android:textSize="10sp"
+                    android:alpha="0.6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_engine_status_row" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- DICTIONARY CARD                     -->
+        <!-- ═══════════════════════════════════ -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_settings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_engine">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- Row 1: "Dictionary" label + Select button (FIXED: button inside card) -->
+                <TextView
+                    android:id="@+id/tv_dict_label"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Dictionary"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@id/btn_select_dictionary"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_select_dictionary" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_select_dictionary"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="32dp"
+                    android:text="Select"
+                    android:textSize="12sp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Row 2: password count -->
+                <TextView
+                    android:id="@+id/tv_dict_size"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="Loading..."
+                    android:textSize="12sp"
+                    android:alpha="0.8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dict_label" />
+
+                <!-- Row 3: file name info -->
+                <TextView
+                    android:id="@+id/tv_info"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Default: top400.txt (400 common passwords)"
+                    android:textSize="11sp"
+                    android:alpha="0.5"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_dict_size" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- PROGRESS CARD (FIXED: has background) -->
+        <!-- ═══════════════════════════════════ -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_progress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_settings">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp">
+
+                <!-- Status row: label + spinner + pulse dot -->
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ready"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Animated spinner: only visible while testing -->
+                <ProgressBar
+                    android:id="@+id/spinner_testing"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_marginStart="8dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/tv_status"
+                    app:layout_constraintStart_toEndOf="@id/tv_status"
+                    app:layout_constraintTop_toTopOf="@id/tv_status" />
+
+                <!-- Pulsing dot indicator -->
+                <View
+                    android:id="@+id/view_pulse_dot"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_marginStart="6dp"
+                    android:background="@drawable/shape_pulse_dot"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/spinner_testing"
+                    app:layout_constraintStart_toEndOf="@id/spinner_testing"
+                    app:layout_constraintTop_toTopOf="@id/spinner_testing" />
+
+                <!-- Progress counter -->
+                <TextView
+                    android:id="@+id/tv_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 / 0"
+                    android:textSize="13sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Horizontal progress bar -->
+                <ProgressBar
+                    android:id="@+id/progress_bar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="10dp"
+                    android:max="100"
+                    android:progress="0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+                <!-- Current password (FIXED: hidden when idle) -->
+                <TextView
+                    android:id="@+id/tv_current_password"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="monospace"
+                    android:text=""
+                    android:textSize="12sp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/progress_bar" />
+
+                <!-- ETA countdown -->
+                <TextView
+                    android:id="@+id/tv_eta"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text=""
+                    android:textSize="11sp"
+                    android:alpha="0.6"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_current_password" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- RESULT CARD                         -->
+        <!-- ═══════════════════════════════════ -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_result"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_progress">
+
+            <TextView
+                android:id="@+id/tv_result"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- ACTION BUTTONS                      -->
+        <!-- ═══════════════════════════════════ -->
+
+        <LinearLayout
+            android:id="@+id/layout_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_result">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_start_test"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:text="Start Test" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_stop_test"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
+                android:enabled="false"
+                android:text="Stop Test" />
+
+        </LinearLayout>
+
+        <!-- ═══════════════════════════════════ -->
+        <!-- GUIDE CARD (fills empty space)      -->
+        <!-- ═══════════════════════════════════ -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_guide"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="@color/card_background"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/layout_buttons"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💡 Hướng dẫn sử dụng"
+                    android:textStyle="bold"
+                    android:textSize="13sp"
+                    android:layout_marginBottom="8dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="① Chọn mạng WiFi ở tab Analyzer\n② Chọn dictionary phù hợp (Select)\n③ Nhấn Start Test để bắt đầu kiểm tra\n④ Cài Shizuku để tăng tốc độ test (~2s/pw)"
+                    android:textSize="12sp"
+                    android:lineSpacingExtra="4dp"
+                    android:alpha="0.75" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

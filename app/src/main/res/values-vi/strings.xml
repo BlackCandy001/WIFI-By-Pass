@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WIDT</string>
+    <string name="analyzer_title">Phân tích WiFi</string>
+    <string name="tester_title">Kiểm tra từ điển</string>
+    <string name="offline_title">Bẻ khóa ngoại tuyến</string>
+    <string name="settings_title">Cài đặt</string>
+
+    <!-- Analyzer -->
+    <string name="scan_wifi">Quét WiFi</string>
+    <string name="scanning">Đang quét...</string>
+    <string name="no_wifi_found">Không tìm thấy mạng WiFi</string>
+    <string name="signal_strength">Cường độ tín hiệu</string>
+    <string name="channel">Kênh</string>
+    <string name="frequency">Tần số</string>
+    <string name="encryption">Mã hóa</string>
+    <string name="vendor">Nhà sản xuất</string>
+    <string name="bssid">BSSID</string>
+
+    <!-- Tester -->
+    <string name="select_network">Chọn mạng</string>
+    <string name="start_test">Bắt đầu kiểm tra</string>
+    <string name="stop_test">Dừng kiểm tra</string>
+    <string name="progress">Tiến trình</string>
+    <string name="passwords_tried">Mật khẩu đã thử</string>
+    <string name="estimated_time">Thời gian ước tính</string>
+    <string name="password_found">Tìm thấy mật khẩu!</string>
+    <string name="password_not_found">Không tìm thấy mật khẩu trong từ điển</string>
+    <string name="testing_in_progress">Đang kiểm tra...</string>
+    <string name="ready">Sẵn sàng</string>
+    <string name="testing_label">Đang thử:</string>
+
+    <!-- Offline -->
+    <string name="capture_handshake">Bắt Handshake</string>
+    <string name="import_pcap">Nhập PCAP</string>
+    <string name="start_cracking">Bắt đầu bẻ khóa</string>
+
+    <!-- Settings -->
+    <string name="shizuku_status">Trạng thái Shizuku</string>
+    <string name="shizuku_not_running">Shizuku chưa chạy</string>
+    <string name="shizuku_running">Shizuku đang chạy</string>
+    <string name="setup_shizuku">Cài đặt Shizuku</string>
+    <string name="dark_theme">Giao diện tối</string>
+    <string name="dictionary_path">Đường dẫn từ điển</string>
+    <string name="language_title">Ngôn ngữ</string>
+    <string name="language_vietnamese">Tiếng Việt</string>
+    <string name="language_english">English</string>
+    <string name="language_chinese">中文</string>
+    <string name="language_select_hint">Chọn ngôn ngữ hiển thị</string>
+
+    <!-- Common -->
+    <string name="yes">Có</string>
+    <string name="no">Không</string>
+    <string name="cancel">Hủy</string>
+    <string name="ok">OK</string>
+    <string name="warning">Cảnh báo</string>
+    <string name="disclaimer">⚠️ TUYÊN BỐ MIỄN TRỪ ⚠️\n\nỨng dụng này chỉ dành cho MỤC ĐÍCH HỌC TẬP.\nChỉ sử dụng để kiểm tra mạng WiFi CỦA BẠN.\nKHÔNG sử dụng để tấn công mạng của người khác.\n\nKhi sử dụng ứng dụng này, bạn đồng ý với các điều khoản trên.</string>
+</resources>

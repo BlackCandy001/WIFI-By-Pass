@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_analyzer">
+
+    <fragment
+        android:id="@+id/navigation_analyzer"
+        android:name="com.widt.analyzer.AnalyzerFragment"
+        android:label="@string/analyzer_title"
+        tools:layout="@layout/fragment_analyzer">
+        <action
+            android:id="@+id/action_navigation_analyzer_to_navigation_tester"
+            app:destination="@id/navigation_tester" />
+    </fragment>
+    
+    <fragment
+        android:id="@+id/navigation_tester"
+        android:name="com.widt.tester.TesterFragment"
+        android:label="@string/tester_title"
+        tools:layout="@layout/fragment_tester" />
+    
+    <fragment
+        android:id="@+id/navigation_offline"
+        android:name="com.widt.offline.OfflineFragment"
+        android:label="@string/offline_title"
+        tools:layout="@layout/fragment_offline" />
+    
+    <fragment
+        android:id="@+id/navigation_settings"
+        android:name="com.widt.settings.SettingsFragment"
+        android:label="@string/settings_title"
+        tools:layout="@layout/fragment_settings" />
+
+</navigation>
